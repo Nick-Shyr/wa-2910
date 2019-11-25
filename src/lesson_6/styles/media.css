@@ -48,4 +48,28 @@
     height: 400px;
     background-position: center;
   }
+  .container-two-column {
+    flex-direction: column;
+  }
+  .container-airpods,
+  .container-accessories {
+    width: 95%;
+    margin: 0 auto;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+    font-size: 2rem;
+  }
+  .container-airpods > .text-block h2,
+  .container-accessories > .text-block h2 {
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+    font-size: 2rem;
+  }
+  .container-icloud,
+  .container-pay {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .page-container__paypal-img,
+  .page-container__icloud-img {
+    height: 200px;
+  }
 }

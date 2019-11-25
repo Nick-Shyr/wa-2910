@@ -163,9 +163,9 @@
   text-align: center;
   margin-right: 2%;
   overflow: hidden;
-  height: 500px;
+  height: 100%;
   background-image: url("../assets/images/airpods_large_2x.jpg");
-  background-size: contain;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   width: 50%;
@@ -183,26 +183,50 @@
   width: 100%;
 }
 .container-accessories {
-  position: relative;
+  /* position: relative;
   text-align: center;
   margin-left: 2%;
+  overflow: hidden; */
+  position: relative;
+  text-align: center;
+  margin-right: 2%;
   overflow: hidden;
+  height: 100%;
+  background-image: url("../assets/images/accessories_large_2x.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 50%;
 }
 .container-airpods > .text-block {
-  /* position: absolute; */
-  position: static;
-  transform: unset;
-  margin: 12% auto;
+  position: absolute;
+  /* position: static; */
+  top: 50%;
+  left: 50%;
+  margin: 0;
   width: 80%;
   z-index: 1;
+  transform: translate(-50%, -50%);
 }
 
 .container-accessories > .text-block {
+  position: absolute;
+  /* position: static; */
+  top: 50%;
+  left: 50%;
+  margin: 0;
   width: 85%;
   z-index: 1;
+  transform: translate(-50%, -50%);
 }
 .full-screen-img {
   position: relative;
+  background-image: url("../assets/images/howtoshoot_large_2x.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  min-height: 700px;
 }
 .full-screen-img img {
   width: 100%;
@@ -213,7 +237,7 @@
 }
 .full-screen-img > .text-block {
   top: 50%;
-  transform: translate(-50%);
+  transform: translate(-50%, -50%);
   color: #fff;
   z-index: 1;
 }
@@ -246,6 +270,22 @@
   width: 100%;
   display: block;
   margin-bottom: 20px;
+}
+.page-container__paypal-img {
+  height: 350px;
+  width: 100%;
+  background-image: url("../assets/images/apple_pay_large_2x.jpg");
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.page-container__icloud-img {
+  height: 327px;
+  width: 100%;
+  background-image: url("../assets/images/icloud_large_2x.jpg");
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 .page-container__iphonex-bgblock {
   height: 200px;
