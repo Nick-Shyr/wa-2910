@@ -1,0 +1,51 @@
+@media (max-width: 992px) {
+  .page-container__iphonex-bgblock {
+    height: 150px;
+    width: 700px;
+    background-image: url("../assets/images/iphone_x_medium_2x.jpg");
+  }
+  .main-section-conteiner {
+    min-height: 420px;
+  }
+  .main-section {
+    min-height: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .page-container__iphonex-bgblock {
+    height: 100px;
+    width: 500px;
+    background-image: url("../assets/images/iphone_x_small_2x.jpg");
+  }
+  .page-container__iphone8-bgblock {
+    height: 400px;
+    margin-top: 270px;
+  }
+  .section-colums {
+    flex-direction: column;
+  }
+  .page-container-image-left {
+    order: 1;
+    width: 100%;
+    height: 400px;
+  }
+  .page-container-text-right,
+  .page-container-text-left {
+    width: 100%;
+  }
+  .page-container-text-right > .text-block,
+  .page-container-text-left > .text-block {
+    position: static;
+    transform: unset;
+    width: 70%;
+    flex-shrink: 1;
+    text-align: center;
+    margin: 2% auto;
+  }
+  .page-container-image-right {
+    width: 100%;
+    height: 400px;
+    background-position: center;
+  }
+}

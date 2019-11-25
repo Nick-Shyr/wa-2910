@@ -1,0 +1,15 @@
+.page-nav {
+  display: flex;
+  height: 50px;
+  background: rgba(0,0,0,0.8);
+  justify-content: center;
+}
+
+.page-link {
+  color: #FFF;
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  flex-shrink: 1;
+  justify-content: center;
+}
