@@ -1,0 +1,1 @@
+import './hmw_8.scss';

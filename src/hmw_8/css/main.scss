@@ -1,0 +1,136 @@
+// @import "./mixins.scss";
+// @import "./variables.scss";
+
+.section {
+  padding: 1.5rem 0.5rem;
+  position: relative;
+  display: flex;
+
+  &_main-block {
+    background-color: #f5b050;
+    padding: 2rem;
+    height: 550px;
+    z-index: -1;
+  }
+  &_main-block-wrap {
+    width: 1200px;
+    @include section-wraps;
+    // margin: 0 auto;
+    // display: flex;
+    // justify-content: space-between;
+    // align-items: center;
+  }
+  &__block-text {
+    width: 40%;
+  }
+  &__img {
+    width: 60%;
+    margin: 0;
+    padding: 0;
+  }
+  &__img img {
+    display: block;
+    width: 100%;
+  }
+  &__btn-wrapper {
+    display: flex;
+    justify-content: flex-start;
+  }
+  &__block-img {
+    width: 60%;
+    text-align: center;
+    padding: 1rem 2rem;
+  }
+  &__block-img img {
+    display: block;
+    width: 100%;
+  }
+}
+// .section__block-img {
+//   background-image: url("../assets/heroImage.png");
+//   background-size: cover;
+//   background-position: center;
+//   background-repeat: no-repeat;
+// }
+.block-text-main {
+  font-size: 30px;
+  font-weight: bold;
+  margin: 23px 0;
+
+  &_white-text {
+    color: white;
+  }
+}
+.btn {
+  font-family: inherit;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  font-size: 1rem;
+  font-size: 18px;
+  font-weight: 700;
+  border-radius: 40px;
+  border: 2px solid transparent;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  transition: 0.15s ease-in-out;
+  box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.24);
+  color: white;
+  display: block;
+  padding: 16px 39px;
+  word-break: keep-all;
+  white-space: nowrap;
+
+  &_main-block {
+    color: white;
+    background-color: black;
+  }
+}
+
+.benefits {
+  height: 700px;
+
+  &_wrap {
+    width: 1200px;
+    @include section-wraps;
+    padding: 2rem;
+    align-items: flex-start;
+  }
+  &__img-left {
+    width: 50%;
+    align-self: center;
+  }
+  &__img-left img {
+    width: 100%;
+    display: block;
+  }
+  &__text-right {
+    width: 50%;
+    margin-left: 5%;
+  }
+  &__text-right span {
+    font-size: 40px;
+    font-weight: bold;
+  }
+  &__list {
+    display: flex;
+    // flex-wrap: wrap;
+  }
+  &__list ul:nth-child(1) {
+    top: -60px;
+  }
+  &__list-item {
+    margin: 19px 10px;
+    font-weight: bold;
+    list-style: disc;
+  }
+  &__icon {
+    // background-image: url("../assets/fridgeSectorCopy.png");
+    background-image: url("/src/hmw_8/assets/fridgeSectorCopy.png");
+    height: 130px;
+    width: 200px;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+}

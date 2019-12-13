@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="http://localhost:35729/livereload.js"></script>
+    <title key="title"></title>
+  </head>
+  <body>
+    <h1>Hello from lesson_ten</h1>
+    <script>
+      let cart = ["Phone", "sdf", "adfadf", "adf"];
+      const colors = ["red", "yellow", "green"];
+      const strLength = [];
+      const randomIndex = Math.floor(Math.random() * colors.length);
+
+      for (let i = 0; i < cart.length; i++) {
+        strLength.push(cart[i].length);
+      }
+      console.log(strLength);
+      // alert(colors[randomIndex]);
+
+      const numbers = [12, 2, 5];
+      let total = 0;
+      for (let i = 0; i < numbers.length; i++) {
+        total += numbers[i];
+      }
+      console.log(total);
+    </script>
+  </body>
+</html>

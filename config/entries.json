@@ -10,5 +10,26 @@
   ],
   "lesson_8": [
     "./src/lesson_8/lesson_8.js"
+  ],
+  "hmw_8": [
+    "./src/hmw_8/hmw_8.js"
+  ],
+  "meeting5": [
+    "./src/meeting5/meeting5.js"
+  ],
+  "lesson_9": [
+    "./src/lesson_9/lesson_9.js"
+  ],
+  "lesson_ten": [
+    "./src/lesson_ten/lesson_ten.js"
+  ],
+  "lesson_11_hmw": [
+    "./src/lesson_11_hmw/lesson_11_hmw.js"
+  ],
+  "lesson_10_hmw": [
+    "./src/lesson_10_hmw/lesson_10_hmw.js"
+  ],
+  "lesson_12_hmw": [
+    "./src/lesson_12_hmw/lesson_12_hmw.js"
   ]
 }

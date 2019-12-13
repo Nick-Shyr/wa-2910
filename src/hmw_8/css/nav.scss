@@ -1,0 +1,38 @@
+.header {
+  background-color: white;
+  width: 100%;
+  box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.24);
+}
+.navbar {
+  display: flex;
+  position: relative;
+  width: 1200px;
+  justify-content: space-between;
+  margin: 0 auto;
+  height: 62px;
+
+  &__menu {
+    font-size: 1rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  &__menu li {
+    display: inline;
+    margin: 0 1rem;
+    transition: color 0.2s linear;
+  }
+  &__menu li:hover {
+    cursor: pointer;
+    color: #f5b050;
+  }
+}
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__link {
+  }
+}
