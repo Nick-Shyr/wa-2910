@@ -1,0 +1,5 @@
+
+.container{width:800px;margin:20px auto}.accordionBlock__title{background-color:#eee;color:#444;padding:15px;display:flex;justify-content:space-between;align-items:center;font-size:20px;font-weight:bold}.accordionBlock__title:hover{background-color:#555;cursor:pointer;color:white}.accordionBlock__title:hover>.accordionBlock__button{background-image:url(./assets/images/arrow-white.png)}.accordionBlock__text{font-size:16px;display:block;visibility:visible;height:0;overflow:hidden;transition:all 0.5s}.accordionBlock__button{background-image:url(./assets/images/arrow.png);background-size:contain;width:15px;height:15px;margin:0 10px;transform:rotate(180deg)}.active{background-color:#555;color:white}
+
+
+/*# sourceMappingURL=lesson_14_hmw.css.map*/

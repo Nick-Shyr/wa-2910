@@ -86,6 +86,102 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./src/lesson_11_hmw/functions.js":
+/*!****************************************!*\
+  !*** ./src/lesson_11_hmw/functions.js ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+//Напишите функцию randomInteger(min, max) для генерации случайного целого числа между min и
+//max, включая min,max как возможные значения
+var minInt = 1;
+var maxInt = 10;
+var firstFunc = document.querySelector("#func-1");
+var secondFunc = document.querySelector("#func-2");
+var thirdFunc = document.querySelector("#func-3");
+
+var randomInteger = function randomInteger(min, max) {
+  var randVal = Math.floor(Math.random() * (max - min + 1)) + min;
+  console.log(randVal);
+  return randVal;
+};
+
+firstFunc.onclick = function () {
+  randomInteger(100, 110);
+}; // Мини-задача на синтаксис объектов. Напишите код, по строке на каждое действие.
+// Создайте пустой объект user.
+// Добавьте свойство name со значением Вася.
+// Добавьте свойство surname со значением Петров.
+// Поменяйте значение name на Сергей.
+// Удалите свойство name из объектa
+
+
+var user = {
+  name: "Vasya",
+  surname: "Petrov"
+};
+user.name = "Sergey";
+console;
+delete user.name; // Создайте функцию isEmpty(obj), которая возвращает true, если в объекте нет свойств и false – если
+// хоть одно свойство есть.
+
+var objFunc3 = {// a: "adsfaf",
+  // b: "adfadfadfadf",
+  // c: "qqqqqq"
+};
+
+var isEmpty = function isEmpty(test) {
+  var tmpArr = Object.keys(test);
+  var tmpArrLenght;
+
+  if (tmpArr.length === 0) {
+    tmpArrLenght = true;
+  } else {
+    tmpArrLenght = false;
+  }
+
+  return tmpArrLenght;
+};
+
+secondFunc.onclick = function () {
+  var result = isEmpty(objFunc3);
+  console.log("result of isEmpty function = ", result);
+}; // Есть объект salaries с зарплатами. Напишите код, который выведет сумму всех зарплат. Если объект
+// пустой, то результат должен быть 0.
+
+
+var salaries = {
+  John: 400,
+  Jack: 20000,
+  test: "asdasdasd"
+};
+
+var calc = function calc(objSalaries) {
+  var sum = 0;
+  var tmpArr = Object.keys(objSalaries);
+
+  for (var i = 0; i < tmpArr.length; i++) {
+    console.log(_typeof(tmpArr[i]));
+    console.log(tmpArr[i]);
+
+    if (typeof tmpArr[i] === "number") {
+      sum += tmpArr[i];
+    }
+  }
+
+  console.log(sum);
+  return sum;
+};
+
+thirdFunc.onclick = function () {
+  calc(salaries);
+};
+
+/***/ }),
+
 /***/ "./src/lesson_11_hmw/lesson_11_hmw.js":
 /*!********************************************!*\
   !*** ./src/lesson_11_hmw/lesson_11_hmw.js ***!
@@ -97,6 +193,9 @@
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _lesson_11_hmw_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./lesson_11_hmw.scss */ "./src/lesson_11_hmw/lesson_11_hmw.scss");
 /* harmony import */ var _lesson_11_hmw_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_lesson_11_hmw_scss__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _functions__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./functions */ "./src/lesson_11_hmw/functions.js");
+/* harmony import */ var _functions__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_functions__WEBPACK_IMPORTED_MODULE_1__);
+
 
 
 /***/ }),

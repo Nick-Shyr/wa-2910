@@ -31,5 +31,17 @@
   ],
   "lesson_12_hmw": [
     "./src/lesson_12_hmw/lesson_12_hmw.js"
+  ],
+  "meeting_6": [
+    "./src/meeting_6/meeting_6.js"
+  ],
+  "meet_6_hmw": [
+    "./src/meet_6_hmw/meet_6_hmw.js"
+  ],
+  "lesson_14_hmw": [
+    "./src/lesson_14_hmw/lesson_14_hmw.js"
+  ],
+  "meet_7": [
+    "./src/meet_7/meet_7.js"
   ]
 }

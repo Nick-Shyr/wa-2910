@@ -1,0 +1,57 @@
+.h1_wrap {
+  width: 465px;
+  margin: 0 auto;
+}
+
+.garland-block {
+  &__wrap {
+    border: 2px solid black;
+    width: 98%;
+    margin: 10px auto;
+  }
+  &__button {
+    width: 202px;
+    height: 40px;
+    border-radius: 5%;
+    background-color: grey;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 25px;
+    margin: 15px auto;
+    border: 2px solid white;
+
+    &:hover {
+      box-shadow: 0px 3px 13px 5px rgba(0, 0, 0, 0.7);
+      background-color: rgb(59, 59, 59);
+      cursor: pointer;
+    }
+  }
+  &__light {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid black;
+    background-color: rgb(177, 177, 177);
+    margin: 5px;
+    cursor: pointer;
+
+    &::after {
+      content: "";
+      border: 2px black solid;
+      width: 10px;
+      height: 2px;
+      transform: translate(30px, 12px);
+      position: absolute;
+    }
+    &:last-child::after {
+      display: none;
+    }
+  }
+  &__lights {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+}

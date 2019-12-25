@@ -1,0 +1,4 @@
+.h1_wrap{width:465px;margin:0 auto}.garland-block__wrap{border:2px solid black;width:98%;margin:10px auto}.garland-block__button{width:202px;height:40px;border-radius:5%;background-color:grey;display:flex;align-items:center;justify-content:center;color:white;font-size:25px;margin:15px auto;border:2px solid white}.garland-block__button:hover{box-shadow:0px 3px 13px 5px rgba(0,0,0,0.7);background-color:#3b3b3b;cursor:pointer}.garland-block__light{width:30px;height:30px;border-radius:50%;border:2px solid black;background-color:#b1b1b1;margin:5px;cursor:pointer}.garland-block__light::after{content:"";border:2px black solid;width:10px;height:2px;transform:translate(30px, 12px);position:absolute}.garland-block__light:last-child::after{display:none}.garland-block__lights{display:flex;flex-wrap:wrap;justify-content:flex-start}
+
+
+/*# sourceMappingURL=meet_6_hmw.css.map*/

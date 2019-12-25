@@ -1,0 +1,16 @@
+.h1__wrap {
+  margin: 20px auto;
+  width: 300px;
+}
+.image__wrap {
+  background-image: url(./assets/img/car_hot_wheels.png);
+  background-size: cover;
+  width: 300px;
+  height: 200px;
+  border: 2px solid black;
+  border-radius: 20%;
+  &:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+    cursor: pointer;
+  }
+}
