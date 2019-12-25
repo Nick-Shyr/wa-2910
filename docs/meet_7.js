@@ -104,6 +104,10 @@ var option = [{
   title: "Option 2"
 }, {
   title: "Option 3"
+}, {
+  title: "Option 4"
+}, {
+  title: "Option 5"
 }];
 var container = document.querySelector(".container");
 var countOption = option.length;
@@ -134,32 +138,43 @@ var renderOptions = function renderOptions(mountPoint) {
   mountPoint.appendChild(buttonOptionWrap);
 };
 
+var openOptions = function openOptions() {
+  var option = document.querySelector(".button__options");
+  var optionItems = document.querySelectorAll(".button__option");
+  option.style.visibility = "visible";
+  option.style.height = 40 * optionItems.length + "px";
+};
+
+var closeOptions = function closeOptions() {
+  var option = document.querySelector(".button__options");
+  option.style.visibility = "hidden";
+  option.style.height = "0";
+};
+
 var toggleOptions = function toggleOptions() {
   var button = document.querySelector(".button__wrap");
-  var option = document.querySelector(".button__options");
   button.addEventListener("click", function () {
     if (isOpen) {
-      option.style.visibility = "hidden";
+      closeOptions();
     } else {
-      option.style.visibility = "visible";
+      openOptions();
     }
 
     isOpen = !isOpen;
-    console.log(isOpen);
   });
 };
 
 var optionClick = function optionClick() {
   var option = document.querySelectorAll(".button__option");
+  var title = document.querySelector(".button__title");
   option.forEach(function (item) {
     item.addEventListener("click", function () {
       optionText = item.innerHTML;
+      title.textContent = optionText;
+      closeOptions();
+      isOpen = false;
     });
   });
-  var textButton = document.querySelectorAll(".button__title");
-  textButton.textContent = optionText;
-  console.log(optionText);
-  console.log(textButton);
 };
 
 renderButton(container);

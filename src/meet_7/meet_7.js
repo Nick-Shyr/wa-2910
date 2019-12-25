@@ -3,7 +3,9 @@ import "./meet_7.scss";
 const option = [
   { title: "Option 1" },
   { title: "Option 2" },
-  { title: "Option 3" }
+  { title: "Option 3" },
+  { title: "Option 4" },
+  { title: "Option 5" }
 ];
 
 const container = document.querySelector(".container");
@@ -34,32 +36,42 @@ const renderOptions = mountPoint => {
   }
   mountPoint.appendChild(buttonOptionWrap);
 };
+const openOptions = () => {
+  let option = document.querySelector(".button__options");
+  let optionItems = document.querySelectorAll(".button__option");
+  option.style.visibility = "visible";
+  option.style.height = 40 * optionItems.length + "px";
+};
+const closeOptions = () => {
+  let option = document.querySelector(".button__options");
+  option.style.visibility = "hidden";
+  option.style.height = "0";
+};
 
 const toggleOptions = () => {
   let button = document.querySelector(".button__wrap");
-  let option = document.querySelector(".button__options");
+
   button.addEventListener("click", () => {
     if (isOpen) {
-      option.style.visibility = "hidden";
+      closeOptions();
     } else {
-      option.style.visibility = "visible";
+      openOptions();
     }
     isOpen = !isOpen;
-    console.log(isOpen);
   });
 };
 
 const optionClick = () => {
   let option = document.querySelectorAll(".button__option");
+  let title = document.querySelector(".button__title");
   option.forEach(item => {
     item.addEventListener("click", () => {
       optionText = item.innerHTML;
+      title.textContent = optionText;
+      closeOptions();
+      isOpen = false;
     });
   });
-  let textButton = document.querySelectorAll(".button__title");
-  textButton.textContent = optionText;
-  console.log(optionText);
-  console.log(textButton);
 };
 
 renderButton(container);
