@@ -43,5 +43,8 @@
   ],
   "meet_7": [
     "./src/meet_7/meet_7.js"
+  ],
+  "lesson_16_hmw": [
+    "./src/lesson_16_hmw/lesson_16_hmw.js"
   ]
 }
