@@ -77,7 +77,7 @@
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "/";
+/******/ 	__webpack_require__.p = "./";
 /******/
 /******/
 /******/ 	// Load entry module and return exports
@@ -123,12 +123,12 @@ function () {
     this.mountPoint = mountPoint;
     this.bgColor = bgColor;
     this.el;
-    console.log(this);
+    this.type = 0;
   }
 
   _createClass(Clock, [{
-    key: "render",
-    value: function render() {
+    key: "renderFull",
+    value: function renderFull() {
       this.dateWrap = document.createElement("div");
       this.dateWrap.classList.add("date__wrap");
       this.dateWrap.style.backgroundColor = "".concat(this.bgColor);
@@ -136,7 +136,9 @@ function () {
       this.dateMinutes = document.createElement("div");
       this.dateSecond = document.createElement("div");
       this.dateColon = document.createElement("div");
+      this.dateColon.textContent = ":";
       this.dateColon2 = document.createElement("div");
+      this.dateColon2.textContent = ":";
       this.dateWrap.classList.add("date__wrap");
       this.dateHours.classList.add("date__hours");
       this.dateMinutes.classList.add("date__min");
@@ -149,55 +151,127 @@ function () {
       this.dateWrap.appendChild(this.dateColon2);
       this.dateWrap.appendChild(this.dateSecond);
       this.mountPoint.appendChild(this.dateWrap);
+    } // renderShort() {
+    //   this.dateWrap = document.createElement("div");
+    //   this.dateWrap.classList.add("date__wrap");
+    //   this.dateWrap.style.backgroundColor = `${this.bgColor}`;
+    //   this.dateHours = document.createElement("div");
+    //   this.dateMinutes = document.createElement("div");
+    //   this.dateColon = document.createElement("div");
+    //   this.dateWrap.classList.add("date__wrap");
+    //   this.dateHours.classList.add("date__hours");
+    //   this.dateMinutes.classList.add("date__min");
+    //   this.dateColon.classList.add("date__colon");
+    //   this.dateWrap.appendChild(this.dateHours);
+    //   this.dateWrap.appendChild(this.dateColon);
+    //   this.dateWrap.appendChild(this.dateMinutes);
+    //   this.mountPoint.appendChild(this.dateWrap);
+    // }
+
+  }, {
+    key: "currentDateFull",
+    value: function currentDateFull() {
+      this.renderFull();
+    } // currentDate() {
+    //   this.render();
+    //   this.dateWrap = document.querySelector(".date__wrap");
+    //   this.dateHours = document.querySelector(".date__hours");
+    //   this.dateMinutes = document.querySelector(".date__min");
+    //   this.dateColon = document.querySelector(".date__colon");
+    //   this.dateColon.textContent = ":";
+    // }
+
+  }, {
+    key: "updateClock",
+    value: function updateClock() {
+      var currentDate = new Date();
+      var hours = String(currentDate.getHours());
+      var min = String(currentDate.getMinutes());
+      var sec = String(currentDate.getSeconds());
+      this.dateHours.textContent = hours;
+      this.dateMinutes.textContent = min;
+      this.dateSecond.textContent = sec; // if (this.type == 0) {
+      //   // if (hours.length == 1) {
+      //   //   this.dateHours.textContent = "0" + hours;
+      //   // } else {
+      //   //   this.dateHours.textContent = hours;
+      //   // }
+      //   // if (min.length == 1) {
+      //   //   this.dateMinutes.textContent = "0" + min;
+      //   // } else {
+      //   //   this.dateMinutes.textContent = min;
+      //   // }
+      //   // if (sec.length == 1) {
+      //   //   this.dateSecond.textContent = "0" + sec;
+      //   // } else {
+      //   //   this.dateSecond.textContent = sec;
+      //   // }
+      // } else if (this.type == 1) {
+      //   // if (hours.length == 1) {
+      //   //   this.dateHours.textContent = "0" + sec;
+      //   // } else {
+      //   //   this.dateHours.textContent = hours;
+      //   // }
+      //   // if (min.length == 1) {
+      //   //   this.dateMinutes.textContent = "0" + min;
+      //   // } else {
+      //   //   this.dateMinutes.textContent = min;
+      //   // }
+      // }
     }
   }, {
-    key: "currentDate",
-    value: function currentDate() {
+    key: "changeToShort",
+    value: function changeToShort() {
+      this.dateSecond.style.display = "none";
+      this.dateColon2.style.display = "none";
+    }
+  }, {
+    key: "changeToFull",
+    value: function changeToFull() {
+      this.dateSecond.style.display = "block";
+      this.dateColon2.style.display = "block";
+    }
+  }, {
+    key: "startClock",
+    value: function startClock() {
       var _this = this;
 
-      this.dateWrap = document.querySelector(".date__wrap");
-      this.dateHours = document.querySelector(".date__hours");
-      this.dateMinutes = document.querySelector(".date__min");
-      this.dateSecond = document.querySelector(".date__sec");
-      this.dateColon = document.querySelectorAll(".date__colon");
-      this.dateColon.forEach(function (item) {
-        item.textContent = ":";
-      });
       setInterval(function () {
-        var currentDate = new Date();
-        var hours = String(currentDate.getHours());
-        var min = String(currentDate.getMinutes());
-        var sec = String(currentDate.getSeconds());
-
-        if (hours.length == 1) {
-          _this.dateHours.textContent = "0" + sec;
-        } else {
-          _this.dateHours.textContent = hours;
-        }
-
-        if (min.length == 1) {
-          _this.dateMinutes.textContent = "0" + min;
-        } else {
-          _this.dateMinutes.textContent = min;
-        }
-
-        if (sec.length == 1) {
-          _this.dateSecond.textContent = "0" + sec;
-        } else {
-          _this.dateSecond.textContent = sec;
-        }
+        return _this.updateClock();
       }, 1000);
+    }
+  }, {
+    key: "clickForChangeType",
+    value: function clickForChangeType() {
+      var _this2 = this;
+
+      this.dateWrap = document.querySelector(".date__wrap");
+      this.dateWrap.addEventListener("click", function () {
+        if (_this2.type < 1) {
+          _this2.type += 1;
+        } else {
+          _this2.type = 0;
+        }
+
+        if (_this2.type == 0) {
+          _this2.changeToFull();
+        } else if (_this2.type == 1) {
+          _this2.changeToShort();
+        }
+
+        console.log("this.type=", _this2.type);
+      });
     }
   }, {
     key: "clickForChangeBg",
     value: function clickForChangeBg() {
-      var _this2 = this;
+      var _this3 = this;
 
       this.dateWrap = document.querySelector(".date__wrap");
       this.dateWrap.style.cursor = "pointer";
       this.dateWrap.addEventListener("click", function () {
         var bg = getRandomColor();
-        _this2.dateWrap.style.backgroundColor = "".concat(bg);
+        _this3.dateWrap.style.backgroundColor = "".concat(bg);
       });
     }
   }]);
@@ -223,9 +297,10 @@ __webpack_require__.r(__webpack_exports__);
 
 var body = document.querySelector("body");
 var clock = new _date_func__WEBPACK_IMPORTED_MODULE_1__["Clock"](body);
-clock.render();
-clock.currentDate();
-clock.clickForChangeBg(); // currentDate();
+clock.renderFull();
+clock.startClock();
+clock.clickForChangeBg();
+clock.clickForChangeType(); // currentDate();
 
 /***/ }),
 
