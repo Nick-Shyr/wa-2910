@@ -46,5 +46,8 @@
   ],
   "lesson_16_hmw": [
     "./src/lesson_16_hmw/lesson_16_hmw.js"
+  ],
+  "final": [
+    "./src/final/final.js"
   ]
 }

@@ -1,0 +1,7 @@
+Movies
+Всерстать страницу каталога фильмов согласно шаблону 
+https://app.zeplin.io/project/5b0b20f0e1de18fc65af95b7/screen/5b3a92084bb816577f7337bf
+Данные о фильмах нужно получить с помощью аякс по адресу 
+https://my-json-server.typicode.com/ilyalytvynov/ads-box-server/movies 
+
+Страница должна быть адаптивной, дизайн на усмотрение
