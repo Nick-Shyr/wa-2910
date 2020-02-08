@@ -1,0 +1,106 @@
+@import "../variables.scss";
+
+.button-el {
+  text-transform: uppercase;
+  font-size: 0.9em;
+  color: white;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  margin-right: 20px;
+  border-radius: 5px;
+}
+
+.button_signUp {
+  position: absolute;
+  top: 20px;
+  right: 50px;
+  z-index: 1000;
+}
+.button_login {
+  position: absolute;
+  top: 20px;
+  right: 200px;
+  z-index: 1000;
+}
+.button__search {
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 372px;
+  height: 40px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  z-index: 1000;
+
+  & .search-icon {
+    width: 23px;
+    height: 25px;
+    background-image: url("../assets/img/search-icon_white.png");
+    background-size: 100% 100%;
+    transition: all linear 0.3s;
+    &:hover {
+      // transition: all linear 0.3s;
+      background-image: url("../assets/img/search-icon_pink.png");
+    }
+  }
+
+  & > input {
+    width: 0;
+    border: none;
+    border-radius: 3px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.35);
+    outline: none;
+    display: block;
+    transition: all linear 0.3s;
+    margin-right: 10px;
+    &:focus {
+      color: #8d0142;
+      background-color: rgba(255, 255, 255, 0.75);
+    }
+  }
+}
+
+@media (max-width: #{$tablet - 1px}) {
+  .button_signUp {
+    min-width: 90px !important;
+    height: 30px !important;
+    font-size: 0.7em;
+    top: 5px;
+    right: -20px;
+    border-radius: unset;
+  }
+  .button_login {
+    min-width: 90px !important;
+    height: 30px !important;
+    font-size: 0.7em;
+    top: 5px;
+    right: 70px;
+    border-radius: unset;
+  }
+  .button__search {
+    top: 1px;
+    right: 185px;
+    & > .search-icon {
+      width: 10px;
+      height: 10px;
+    }
+    & > input {
+      // width: 130px !important;
+      // padding: 3px;
+      height: 22px;
+      font-size: 10px;
+    }
+  }
+}
+@media (max-width: $mobile) {
+  .button__search input {
+    position: absolute;
+    bottom: -15px;
+    left: -60px;
+    // height: 0;
+    // visibility: hidden;
+  }
+}

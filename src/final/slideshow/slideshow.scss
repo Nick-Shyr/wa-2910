@@ -1,0 +1,106 @@
+@import "../variables.scss";
+
+.slider {
+  &__block {
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    transition: all 1s;
+    // opacity: 0;
+  }
+  &__title {
+    text-transform: uppercase;
+    color: white;
+    font-weight: 300;
+    font-size: 2.2em;
+  }
+  &__bottom {
+    width: 90%;
+    margin: 20px auto;
+    min-height: 120px;
+    position: relative;
+  }
+  &__genre {
+    font-size: 1em;
+    margin: 15px 0;
+    color: white;
+    &::first-letter {
+      text-transform: uppercase;
+    }
+  }
+  &__rating {
+    width: 200px;
+    height: 70px;
+    background-color: rgba(73, 76, 98, 0.2);
+    border-radius: 5px;
+    border: solid 2px rgba(255, 255, 255, 0.2);
+    position: absolute;
+    bottom: 10px;
+    color: white;
+    right: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 7px 10px;
+
+    &_bottom {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    &_number {
+      font-size: 19px;
+      border: 0.1px solid white;
+      padding: 7px;
+    }
+    &_stars {
+      display: flex;
+      width: 70%;
+      justify-content: space-between;
+      margin-bottom: 5px;
+
+      & > span {
+        // content: "\2606";
+        font-size: 25px;
+        color: #ff0079;
+      }
+    }
+  }
+}
+
+@media (max-width: #{$tablet - 1px}) {
+  .slider {
+    &__block {
+      justify-content: center;
+      background-position: left;
+    }
+    &__title {
+      display: block;
+      margin: 0 auto;
+      text-align: center;
+      text-shadow: 1px 1px 2px black;
+    }
+    &__genre {
+      display: block;
+      text-align: center;
+      font-size: 1.1em;
+      text-shadow: 1px 1px 2px black;
+    }
+    &__bottom {
+      height: 350px;
+    }
+    &__rating {
+      display: block;
+      position: relative;
+      top: 0;
+      right: 0;
+      margin: 0 auto 25px;
+      text-shadow: 1px 1px 2px black;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+  }
+}

@@ -1,0 +1,88 @@
+.footer__first {
+  width: 90%;
+  margin: 0 auto;
+  padding: 10px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer__second {
+  width: 90%;
+  margin: 0 auto;
+  padding: 10px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  color: #80818a;
+  font-size: 0.7em;
+}
+
+.footer__media-ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  min-width: 100px;
+  margin: 0;
+  padding: 0;
+
+  & li {
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+    list-style-type: none;
+    transition: all 0.5s;
+    background-size: 100% 100%;
+    cursor: pointer;
+  }
+
+  .li_facebook {
+    background-image: url("../assets/img/icon__facebook_grey.png");
+
+    &:hover {
+      background-image: url("../assets/img/icon__facebook.png");
+    }
+  }
+  .li_twitter {
+    background-image: url("../assets/img/icon__twitter_grey.png");
+
+    &:hover {
+      background-image: url("../assets/img/icon__twitter.png");
+    }
+  }
+  .li_linkedin {
+    background-image: url("../assets/img/icon__linkedin_grey.png");
+
+    &:hover {
+      background-image: url("../assets/img/icon__linkedin.png");
+    }
+  }
+  .li_instagram {
+    background-image: url("../assets/img/icon__insta_grey.png");
+
+    &:hover {
+      background-image: url("../assets/img/icon__insta.png");
+    }
+  }
+}
+
+.footer__nav-ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  min-width: 100px;
+  margin: 0;
+  padding: 0;
+
+  & > li {
+    list-style-type: none;
+    color: #80818a;
+    margin-left: 10px;
+    cursor: pointer;
+
+    &:hover {
+      color: #ff0079;
+    }
+  }
+}
